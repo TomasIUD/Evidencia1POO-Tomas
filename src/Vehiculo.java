@@ -6,59 +6,59 @@ public class Vehiculo {
     private double kilometraje; // Kilometraje del vehículo
 
     // Constructor de la clase Vehiculo
-    public Vehiculo(String codigo, String marca, String tipo, int modelo, double kilometraje) {
-        this.codigo = codigo;
+    public Vehiculo(String codigo, String marca, String tipo, int modelo, double kilometraje) { //parametros del constructor para cuando se crea un vehículo tenga los atributos necesarios
+        this.codigo = codigo; // se asigna el valor del parametro codigo al atributo codigo
         this.marca = marca;
         this.tipo = tipo;
         this.modelo = modelo;
-        this.kilometraje = ***********;
+        this.kilometraje = kilometraje;
     }
 
     // Métodos getter para obtener los valores de los atributos
-    public String getCodigo() {
-        return ***********;
+    public String getCodigo() { //metodo para obtener el código del vehículo
+        return codigo; //devuelve el atributo código del vehículo
     }
 
     public String getMarca() {
-        return ***********;
+        return marca;
     }
 
     public String getTipo() {
-        return ***********;
+        return tipo;
     }
 
     public int getModelo() {
-        return ***********;
+        return modelo; //devuelve el atributo modelo del vehículo
     }
 
     public double getKilometraje() {
-        return ***********;
+        return kilometraje;
     }
 
     // Método toString para representar la información del vehículo en texto
     @Override
     public String toString() {
-        return "[Codigo: " + codigo + ", Marca: " + marca + ", Tipo: " + tipo + ", Modelo: " + modelo + ", Kilometraje: " + kilometraje + "]";
+        return "[Codigo: " + codigo + ", Marca: " + marca + ", Tipo: " + tipo + ", Modelo: " + modelo + ", Kilometraje: " + kilometraje + "]"; //devuelve la información del vehículo
     }
 }
-// Clases derivadas de Vehiculo
+// Clases derivadas de Vehiculo o herencias de la clase vehiculo que son Auto, Camioneta y Motocicleta
 class Auto extends Vehiculo {
     // Constructor de la clase Auto
     public Auto(String codigo, String marca, int modelo, double kilometraje) {
-        super(codigo, marca, ******, modelo, kilometraje); // Llama al constructor de Vehiculo
+        super(codigo, marca, "auto", modelo, kilometraje); // Llama al constructor de Vehiculo
     }
 }
 
 class Camioneta extends Vehiculo {
     // Constructor de la clase Camioneta
-    public Camioneta(String *****, String marca, int *****, double kilometraje) {
-        super(codigo, marca, "Camioneta", modelo, ***********);
+    public Camioneta(String codigo, String marca, int modelo, double kilometraje) {
+        super(codigo, marca, "Camioneta", modelo, kilometraje);
     }
 }
 
 class Motocicleta extends Vehiculo {
     // Constructor de la clase Motocicleta
-    public Motocicleta(String codigo, String marca, int modelo, double ********) {
-        super(codigo, ********, "Motocicleta", modelo, kilometraje);
+    public Motocicleta(String codigo, String marca, int modelo, double kilometraje) {
+        super(codigo, marca, "Motocicleta", modelo, kilometraje);
     }
 }
